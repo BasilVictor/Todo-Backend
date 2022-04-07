@@ -40,15 +40,15 @@ CORS(app)
 #             return result
 #         else:
 #             return None
-# # Routes
-# @app.route("/")
-# def home():
-#     serialize_instance = TodoListSerializer(Todo.query.all())
-#     if serialize_instance.is_valid():
-#         data = {
-#             "todo_list": serialize_instance.data(),
-#         }
-#         return jsonify(data), 200
+# Routes
+@app.route("/")
+def home():
+    # serialize_instance = TodoListSerializer(Todo.query.all())
+    # if serialize_instance.is_valid():
+        data = {
+            "todo_list": "hello",
+        }
+        return jsonify(data), 200
 
 
 # @app.route("/add", methods=["POST"])
